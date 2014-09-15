@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1B0EB9F-1366-4D0A-9F71-5E308BF501EF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MassiveParallelizationTest</RootNamespace>
+    <AssemblyName>MassiveParallelizationTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tester.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AlcatelCtiApi\AlcatelCtiApi\AlcatelCtiApi.csproj">
+      <Project>{74aef267-23c1-4117-a8de-574cbd25b2ba}</Project>
+      <Name>AlcatelCtiApi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AlcatelCtiInterface\AlcatelCtiInterfaceAsync\AlcatelCtiInterfaceAsync.csproj">
+      <Project>{8f969876-82e6-43e5-86b8-4bb235ecaace}</Project>
+      <Name>AlcatelCtiInterfaceAsync</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AlcatelXmlApi6Async\AlcatelXmlApi6Async\AlcatelXmlApi6Async.csproj">
+      <Project>{2e2ce98c-2f3b-4339-9f18-982266bc3aea}</Project>
+      <Name>AlcatelXmlApi6Async</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ParallelUtils45\ParallelUtils45\ParallelUtils45.csproj">
+      <Project>{cada0a8a-5043-4ea3-85b7-cbf77401e98f}</Project>
+      <Name>ParallelUtils45</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ToolsV4\ToolsV4\ToolsV4.csproj">
+      <Project>{6f7705f6-c470-4ec6-b334-4115f3216234}</Project>
+      <Name>ToolsV4</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
